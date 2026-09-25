@@ -1,0 +1,94 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-main: #f2f2f7;
+    --bg-surface: #ffffff;
+    --bg-surface-elevated: #ffffff;
+    --bg-subtle: #e5e5ea;
+    --bg-hover: #d1d1d6;
+    --border-main: rgba(60, 60, 67, 0.15);
+    --border-subtle: rgba(60, 60, 67, 0.08);
+    --text-primary: #000000;
+    --text-secondary: #3c3c43;
+    --text-muted: #8e8e93;
+    --accent: #007aff;
+    --accent-hover: #0062cc;
+    --accent-text: #ffffff;
+    --accent-subtle: #e5f1ff;
+  }
+
+  .dark {
+    --bg-main: #000000;
+    --bg-surface: #1c1c1e;
+    --bg-surface-elevated: #2c2c2e;
+    --bg-subtle: #2c2c2e;
+    --bg-hover: #3a3a3c;
+    --border-main: rgba(84, 84, 88, 0.35);
+    --border-subtle: rgba(84, 84, 88, 0.2);
+    --text-primary: #ffffff;
+    --text-secondary: #ebebf5;
+    --text-muted: #8e8e93;
+    --accent: #0a84ff;
+    --accent-hover: #409cff;
+    --accent-text: #ffffff;
+    --accent-subtle: #0f2b48;
+  }
+
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro Display", "Plus Jakarta Sans", system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-tap-highlight-color: transparent;
+  }
+}
+
+/* iOS frosted glass panel helpers */
+.ios-blur {
+  backdrop-filter: blur(24px) saturate(180%);
+  -webkit-backdrop-filter: blur(24px) saturate(180%);
+}
+
+.ios-glass-bar {
+  background-color: rgba(255, 255, 255, 0.82);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+}
+
+.dark .ios-glass-bar {
+  background-color: rgba(22, 22, 24, 0.85);
+}
+
+/* Hairline dividers typical of iOS */
+.ios-hairline-b {
+  border-bottom: 0.5px solid rgba(60, 60, 67, 0.18);
+}
+.dark .ios-hairline-b {
+  border-bottom: 0.5px solid rgba(84, 84, 88, 0.35);
+}
+
+.ios-hairline-t {
+  border-top: 0.5px solid rgba(60, 60, 67, 0.18);
+}
+.dark .ios-hairline-t {
+  border-top: 0.5px solid rgba(84, 84, 88, 0.35);
+}
+
+/* Custom Sleek Scrollbars */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(142, 142, 147, 0.3);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(142, 142, 147, 0.6);
+}

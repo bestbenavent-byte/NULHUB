@@ -1,0 +1,62 @@
+{
+  "entities": {
+    "User": {
+      "title": "User Profile",
+      "description": "User profile representation stored in Firestore",
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "User ID matching Firebase Auth UID"
+        },
+        "username": {
+          "type": "string",
+          "description": "Unique username handle"
+        },
+        "displayName": {
+          "type": "string",
+          "description": "User's display name"
+        },
+        "avatar": {
+          "type": "string",
+          "description": "Profile photo URL"
+        },
+        "email": {
+          "type": "string",
+          "description": "User email address"
+        },
+        "bio": {
+          "type": "string",
+          "description": "Short user biography"
+        },
+        "phone": {
+          "type": "string",
+          "description": "Contact phone number"
+        },
+        "isOnline": {
+          "type": "boolean",
+          "description": "Online availability state"
+        },
+        "streak": {
+          "type": "number",
+          "description": "Daily chat streak counter"
+        },
+        "createdAt": {
+          "type": "string",
+          "description": "Creation timestamp in ISO 8601"
+        },
+        "lastSeen": {
+          "type": "string",
+          "description": "Last seen timestamp in ISO 8601"
+        }
+      },
+      "required": ["id", "username", "displayName", "email"]
+    }
+  },
+  "firestore": {
+    "/users/{userId}": {
+      "schema": "User",
+      "description": "User profile documents indexed by Firebase Auth UID"
+    }
+  }
+}
